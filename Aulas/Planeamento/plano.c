@@ -1,12 +1,13 @@
 /*****************************************************************//**
  * @file   plano.c
- * @brief  Manipulação de um Plano de Produção
+ * @brief  Manipulaï¿½ï¿½o de um Plano de Produï¿½ï¿½o
  * 
  * @author lufer
  * @date   May 2022
  *********************************************************************/
 #include <stdio.h>
 #include "plano.h"
+#include <stdlib.h>
 
 void IniciaPlano(Cel p[][T], int codJob, int codOper) {
 
@@ -33,7 +34,7 @@ void OcupaUm(Cel p[][T], int mId, int t, int codJob, int codOper) {
 }
 
 /**
- * @brief Ocupa várias unidades de tempo.
+ * @brief Ocupa vï¿½rias unidades de tempo.
  * 
  * @param p	- Plano
  * @param mId	- Maquina
@@ -47,17 +48,17 @@ void OcupaVarios(Cel p[][T], int mId, int totTempo, Cel* c) {
 	while (p[mId][col].idJob != -1)
 		col++;
 
-	//Fase 1 - Ocupa a partir da posição livre encontrada
-	totTempo += col;	//porquê?
+	//Fase 1 - Ocupa a partir da posiï¿½ï¿½o livre encontrada
+	totTempo += col;	//porquï¿½?
 	for (; col < totTempo; col++) {
 		p[mId][col].idJob = c->idJob;
 		p[mId][col].idOper = c->idOper;
 		//p[mId][col] = *c;
 	}
 
-	//Fase 2 - Procurar quando a operação anterior
+	//Fase 2 - Procurar quando a operaï¿½ï¿½o anterior
 
-	//Fase 3 - Verficar se após posição livre existe tempo suficiente...
+	//Fase 3 - Verficar se apï¿½s posiï¿½ï¿½o livre existe tempo suficiente...
 }
 
 Ocupa(Cel p[][T], int mId, int totTempo, int codJ, int codO) {
@@ -90,7 +91,10 @@ Job* CarregarDadosFicheiro(char* fileName) {
 	//char d[20];
 
 	fp = fopen(fileName, "r");
-	if (fp == NULL) return;
+	if (fp == NULL) {
+        perror("Failed to open file");
+        exit(1);
+    };
 
 	while (!feof(fp)) {
 		//fgets

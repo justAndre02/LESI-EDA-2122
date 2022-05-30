@@ -7,8 +7,8 @@
  *********************************************************************/
 #pragma once
 #pragma warning (disable: 4996)
-#define M 4		//Número de Máquinas
-#define T 10	//Número de Tempos
+#define M 4		//Nï¿½mero de Mï¿½quinas
+#define T 10	//Nï¿½mero de Tempos
 #define MAX 100
 #include <stdbool.h>
 
@@ -41,7 +41,7 @@ typedef struct Cel {
 void IniciaPlano(Cel p[][T], int codJob, int codOper);
 void OcupaUm(Cel p[][T], int mId, int t, int codJob, int codOper);
 void OcupaVarios(Cel p[][T], int mId, int totTempo, Cel* c);
-void Ocupa(Cel p[][T], int mId, int totTempo, int codJ, int codO);
+Ocupa(Cel p[][T], int mId, int totTempo, int codJ, int codO);
 
 bool SavePlan(char* fileName, Cel p[][T]);
 Cel** GetPlan(char* fileName);

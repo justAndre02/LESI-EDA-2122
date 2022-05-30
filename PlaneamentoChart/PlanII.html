@@ -16,8 +16,6 @@ by lufer
     <script type="text/javascript">
       google.charts.load('current', {'packages':['gantt']});
 
-      //Função Auxiliar
-      //Carrega dados de csv
       var arrayData;
       $(function() {
         // ler CSV
@@ -28,7 +26,6 @@ by lufer
         });
       });
 
-      //google.charts.setOnLoadCallback(drawChart);
       google.charts.setOnLoadCallback(function () {drawChart(arrayData);});
 
       function drawChart(arrayData) {
@@ -36,26 +33,14 @@ by lufer
         var chart = new google.visualization.Gantt(container);
         var dataTable = new google.visualization.DataTable();
 
-/*
-        dataTable.addColumn({ type: 'string', id: 'Maquina' });
-        dataTable.addColumn({ type: 'string', id: 'Label' });
-        dataTable.addColumn({ type: 'string', id: 'Resource' });
-        dataTable.addColumn({ type: 'date', id: 'Start' });
-        dataTable.addColumn({ type: 'date', id: 'End' });
-        dataTable.addColumn("number", "Duration");
-        dataTable.addColumn("number", "Percent Complete");
-        dataTable.addColumn("string", "Dependencies");
-*/
-
-
-        dataTable.addColumn("string", "Task ID");
-        dataTable.addColumn("string", "Task Name");
-        dataTable.addColumn("string", "Resource");
-        dataTable.addColumn("date", "Start");
-        dataTable.addColumn("date", "End");
-        dataTable.addColumn("number", "Duration");
-        dataTable.addColumn("number", "Percent Complete");
-        dataTable.addColumn("string", "Dependencies");
+        dataTable.addColumn("string");
+        dataTable.addColumn("string");
+        dataTable.addColumn({ type: 'string'});
+        dataTable.addColumn("date");
+        dataTable.addColumn("date");
+        dataTable.addColumn("number");
+        dataTable.addColumn("number");
+        dataTable.addColumn("string");
 
         dataTable.addRows(arrayData);
 
@@ -76,9 +61,9 @@ by lufer
     </script>
   </head>
   <body>
-  <h2>Planeamento - EDA (from csv file - abrir a partir de WebStorm)</h2>
+  <h2>Planeamento - EDA</h2>
     <!--Encnntrar css e colocar em "style"-->
-    <div id="timeline" style="height: 180px;"></div>
+    <div id="timeline" style="height: 100%;"></div>
   </body>
 
 </html>

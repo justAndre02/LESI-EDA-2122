@@ -7,7 +7,7 @@ by lufer
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
-    <script src="https://www.google.com/jsapi"><script>
+    <script src="https://www.google.com/jsapi"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="jquery.csv.js"> </script>
 
@@ -22,7 +22,7 @@ by lufer
         $.get("plano.csv", function(csvString) {
           arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
           //Para analisar dados de entrada!
-          //console.table(arrayData);
+          console.table(arrayData);
         });
       });
 
@@ -35,9 +35,7 @@ by lufer
         var dataTable = new google.visualization.DataTable();
 
         dataTable.addColumn({ type: 'string', id: 'Maquina' });
-        //dataTable.addColumn({ type: 'string', id: 'dummy bar label' });
         dataTable.addColumn({ type: 'string', id: 'Bar' });
-        //dataTable.addColumn({ type: 'string', role: 'tooltip' });
         dataTable.addColumn({ type: 'number', id: 'Start' });
         dataTable.addColumn({ type: 'number', id: 'End' });
         dataTable.addRows(arrayData);
@@ -47,7 +45,8 @@ by lufer
             showRowLabels: true,
             colorByRowLabel: true
           },
-          backgroundColor: '#ffd'
+          backgroundColor: '#fff',
+          legend: { position: 'above' }
         };
 
         chart.draw(dataTable, options);
@@ -57,7 +56,7 @@ by lufer
   </head>
   <body>
     <h2>Planemento - EDA</h2>
-    <div id="timeline" style="height: 180px;"></div>
+    <div id="timeline" style="height: 100%;"></div>
   </body>
 
 </html>

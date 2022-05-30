@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="82b741d5-08e9-416c-ba10-5c58280519e2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Aulas/Aulas.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../Aulas/Aulas.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aulas/Planeamento/Planear.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Aulas/Planeamento/Planear.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Aulas/Planeamento/plano.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Aulas/Planeamento/plano.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Aulas/Planeamento/plano.h" beforeDir="false" afterPath="$PROJECT_DIR$/../Aulas/Planeamento/plano.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aulas/Revisoes/AnalisarFicheiros/Ficheiros.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Aulas/Revisoes/AnalisarFicheiros/Ficheiros.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Aulas/Revisoes/AnalisarFicheiros/Files.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Aulas/Revisoes/AnalisarFicheiros/Files.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/Plan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlanII.html" beforeDir="false" afterPath="$PROJECT_DIR$/PlanII.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plano.csv" beforeDir="false" afterPath="$PROJECT_DIR$/plano.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planoGantt.csv" beforeDir="false" afterPath="$PROJECT_DIR$/planoGantt.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +31,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Temp/Outros/Charts&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/André Filipe/OneDrive/Ambiente de Trabalho/Wiki/wiki/LESI-EDA-2122/PlaneamentoChart",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JavaScript Debug.PlanII.html">
     <configuration name="PlanII.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PlaneamentoChart/PlanII.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -47,8 +58,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.PlanII.html" />
-        <item itemvalue="JavaScript Debug.Plan.html" />
         <item itemvalue="JavaScript Debug.Plan.html (1)" />
+        <item itemvalue="JavaScript Debug.Plan.html" />
       </list>
     </recent_temporary>
   </component>
@@ -66,10 +77,14 @@
       <workItem from="1653555689805" duration="3882000" />
       <workItem from="1653640472196" duration="61000" />
       <workItem from="1653640541632" duration="155000" />
+      <workItem from="1653915473987" duration="4700000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
 </project>

@@ -1,4 +1,5 @@
-M1,job 1 - Oper 2, 5, 12,
-M2,job 2 - Oper 1, 6, 8, 
-M,job 3 - Oper 1, 4, 7, 
-M3,job 3 - Oper 2, 9,10, 
+M1,job 1 - Oper 1, 1, 4
+M2,job 2 - Oper 1, 4, 6
+M3,job 3 - Oper 1, 6, 8
+M4,job 3 - Oper 2, 8,11
+M5,job 3 - Oper 3, 11, 13
