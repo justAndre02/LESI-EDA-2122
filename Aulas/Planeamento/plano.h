@@ -42,6 +42,6 @@ void IniciaPlano(Cel p[][T], int codJob, int codOper);
 void OcupaUm(Cel p[][T], int mId, int t, int codJob, int codOper);
 void OcupaVarios(Cel p[][T], int mId, int totTempo, Cel* c);
 Ocupa(Cel p[][T], int mId, int totTempo, int codJ, int codO);
-
+Job* CarregarDadosFicheiro(char* fileName);
 bool SavePlan(char* fileName, Cel p[][T]);
 Cel** GetPlan(char* fileName);
