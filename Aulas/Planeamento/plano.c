@@ -11,11 +11,12 @@
 
 void IniciaPlano(Cel p[][T], int codJob, int codOper) {
 
-	for (int l = 0; l < M; l++)
+	for (int l = 0; l < M; l++){
 		for (int col = 0; col < T; col++) {
 			p[l][col].idJob = codJob;
 			p[l][col].idOper = codOper;
 		}
+	}
 }
 
 /**
@@ -31,6 +32,7 @@ void OcupaUm(Cel p[][T], int mId, int t, int codJob, int codOper) {
 	//testar
 	p[mId][t].idJob = codJob;
 	p[mId][t].idOper = codOper;
+	//printf("%d, %d, %d, %d, %d", p, mId, t, codJob, codOper);
 }
 
 /**
@@ -45,7 +47,7 @@ void OcupaVarios(Cel p[][T], int mId, int totTempo, Cel* c) {
 	
 	//Fase 1: Procurar a primeira "casa" livre
 	int col = 0;
-	while (p[mId][col].idJob != -1){
+	if (p[mId][col].idJob != -1){
 		col++;
 	}
 
@@ -65,7 +67,7 @@ void OcupaVarios(Cel p[][T], int mId, int totTempo, Cel* c) {
 Ocupa(Cel p[][T], int mId, int totTempo, int codJ, int codO) {
 	Cel c = { .idJob=codJ, .idOper=codO };
 	OcupaVarios(p, mId, totTempo, &c);
-	printf("Plano: %d, Maquina: %d, Tempo Decorrido: %d, Célula: %d", p, mId, totTempo, c);
+	printf("\nPlano: Maquina: %d, Tempo Decorrido: %d, Célula %d: Job - %d || Operação - %d\n", mId, totTempo, c, codJ, codO);
 }
 
 /**
@@ -94,23 +96,10 @@ Job* CarregarDadosFicheiro(char* fileName) {
     };
 
 	while (!feof(fp)) {
-		//fgets
-		//fscanf()
 		if (fgets(texto, MAX, fp) != NULL)
 		{
-			//printf("Texto: %s\n", texto);
-			//analisar o texto do ficheiro
-			//3333;sddfsds;224;3434
-			//sscanf(texto, "%d;%[^;];%d;%d", &a, d, &b, &c);
 			sscanf(texto, "%d;%d;%d;%d", &auxJob.codJob, &auxOper.cod, &auxMaq.codM, &auxMaq.t);
 			printf("LIDO: %d - %d - %d - %d \n", auxJob.codJob, auxOper.cod, auxMaq.codM, auxMaq.t);
-			/*
-			if(ProcuraJob(listaJobs,auxJob.codJob)==NULL)
-				listaJobs = InsereJob(listaJobs, auxJob);
-			if(ProcuraOperacaoJob(listaJobs, auxOper.cod)==NULL)
-				listaJobs = InsereOperacaoJob(listaJobs, auxJob.codJob, auxOper);
-			listaJobs = InsereMaquinaOperacaoJob(listaJobs, auxJob.codJob, auxOper.cod, auxMaq);
-			*/
 		}
 	}
 	fclose(fp);

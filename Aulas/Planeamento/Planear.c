@@ -18,20 +18,19 @@ int main() {
 	Job* listaJobs = NULL;
 	int teste;
 	
-	listaJobs=CarregarDadosFicheiro("Dados.csv");
+	//listaJobs=CarregarDadosFicheiro("Dados.csv");
 	
 	#pragma region ESCALONAMENTO
 	Cel plano[M][T];
-	IniciaPlano(plano, 1, 1);
+
+	//IniciaPlano(plano, 1, 1);
 	//OcupaUm(plano, 1, 9, 1, 1);
 
-	Cel aux;
-	aux.idJob = 1;
-	aux.idOper = 1;
+	// Cel aux;
+	// aux.idJob = 1;
+	// aux.idOper = 1;
 
-	OcupaVarios(plano, 1, 6, &aux);
-	
-	teste = printf("teste");
+	//OcupaVarios(plano, 1, 6, &aux);
 
 	Ocupa(plano, 2, 3, 1, 1);
 

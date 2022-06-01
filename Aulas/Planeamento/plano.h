@@ -34,8 +34,6 @@ typedef struct Job {
 typedef struct Cel {
 	int idJob;
 	int idOper;
-	//tempo
-	//outras
 } Cel;
 
 void IniciaPlano(Cel p[][T], int codJob, int codOper);
